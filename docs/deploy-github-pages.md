@@ -20,6 +20,12 @@ For the default repository name:
 https://otmanm.github.io/otman-ai-deployment-hub/
 ```
 
+Current repository:
+
+```text
+https://github.com/otmanm/otman-ai-deployment-hub
+```
+
 The site uses relative links so it works under this project path and also under a future custom domain.
 
 ## Custom Domain Later

@@ -2,6 +2,10 @@
 
 Public proof hub for Otman Mechbal's AI deployment, readiness, and multilingual enablement work.
 
+Live site: `https://otmanm.github.io/otman-ai-deployment-hub/`
+
+Repository: `https://github.com/otmanm/otman-ai-deployment-hub`
+
 The first version is intentionally small:
 
 - a static GitHub Pages site in `site/`
