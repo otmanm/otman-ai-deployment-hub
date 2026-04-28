@@ -1,0 +1,15 @@
+{
+  "name": "otman-ai-deployment-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Proof hub for Otman Mechbal's AI deployment services, Ask-Capitano case study, and ElevenLabs voice demo.",
+  "scripts": {
+    "test": "node --test",
+    "verify:python": "python3 -m py_compile spaces/voice-demo/app.py",
+    "serve": "python3 -m http.server 4173 --directory site"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

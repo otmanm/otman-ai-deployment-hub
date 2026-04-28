@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voice Demo | Otman AI Deployment Hub</title>
+    <meta name="description" content="ElevenLabs voice demo path for the Otman AI Deployment Hub.">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../"><span class="brand-mark">OM</span><span>Otman AI Deployment Hub</span></a>
+        <div class="nav-links">
+          <a href="../services/">Services</a>
+          <a href="../case-studies/ask-capitano/">Ask-Capitano</a>
+          <a href="../demo/" aria-current="page">Voice Demo</a>
+          <a href="../contact/">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-title narrow">
+        <h1>Voice Demo</h1>
+        <p>A small Hugging Face Space proves the voice layer: text in, ElevenLabs audio out, API keys stored as private Space secrets.</p>
+      </section>
+
+      <section class="section alt">
+        <div class="container demo-shell">
+          <div class="voice-card">
+            <h2>Live demo target</h2>
+            <p>When deployed to Hugging Face, the Space lets a visitor generate a short voice response for a consulting website assistant.</p>
+            <div class="meter" aria-label="Animated voice meter">
+              <i style="height: 52%"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <a class="button primary" href="https://huggingface.co/spaces" target="_blank" rel="noreferrer">Open Hugging Face Spaces</a>
+          </div>
+          <div class="panel">
+            <h2>What is included</h2>
+            <ul>
+              <li>`spaces/voice-demo/app.py` with a Gradio interface</li>
+              <li>ElevenLabs text-to-speech integration</li>
+              <li>Safe missing-key fallback</li>
+              <li>Deployment guide for Hugging Face Spaces</li>
+              <li>Optional future OpenAI answer generation hook</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div>
+            <h2>Deployment path</h2>
+            <p class="lead">This is deliberately small enough to inspect in minutes and real enough to show API deployment competence.</p>
+          </div>
+          <div class="code-box">
+<pre>Gradio UI
+  -> visitor text
+  -> ElevenLabs API
+  -> generated audio
+  -> browser playback
+  -> contact CTA</pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© <span data-year></span> Otman Mechbal</span>
+        <span><a href="../contact/">Use this pattern with your team</a></span>
+      </div>
+    </footer>
+    <script src="../assets/site.js"></script>
+  </body>
+</html>

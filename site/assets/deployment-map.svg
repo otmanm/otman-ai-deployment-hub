@@ -1,0 +1,51 @@
+<svg width="1160" height="680" viewBox="0 0 1160 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ask-Capitano deployment architecture map</title>
+  <desc id="desc">A deployment map connecting website visitors, Ask-Capitano, GitHub Pages, Hugging Face Spaces, ElevenLabs, and CRM follow-up.</desc>
+  <rect width="1160" height="680" rx="32" fill="#F6F2EA"/>
+  <rect x="54" y="54" width="1052" height="572" rx="28" fill="#17212B"/>
+  <path d="M152 182H1008" stroke="#E6DBC8" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M152 340H1008" stroke="#E6DBC8" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M152 498H1008" stroke="#E6DBC8" stroke-opacity=".22" stroke-width="2"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="116" y="123" fill="#F6F2EA" font-size="40" font-weight="700">Ask-Capitano deployment map</text>
+    <text x="116" y="154" fill="#E6DBC8" font-size="18">Visitor intent to voice demo to deployment evidence</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="116" y="226" width="212" height="102" rx="14" fill="#F6F2EA"/>
+    <text x="140" y="264" fill="#17212B" font-size="21" font-weight="700">Website visitor</text>
+    <text x="140" y="294" fill="#53606D" font-size="15">Asks about AI adoption,</text>
+    <text x="140" y="316" fill="#53606D" font-size="15">training, or deployment.</text>
+    <path d="M328 277H444" stroke="#F0B45A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M444 277L427 264V290L444 277Z" fill="#F0B45A"/>
+    <rect x="458" y="213" width="246" height="128" rx="16" fill="#E9F4F0"/>
+    <text x="482" y="253" fill="#17212B" font-size="23" font-weight="700">Ask-Capitano</text>
+    <text x="482" y="284" fill="#315C51" font-size="15">Sales enablement hub,</text>
+    <text x="482" y="306" fill="#315C51" font-size="15">readiness triage, voice layer.</text>
+    <path d="M704 277H820" stroke="#F0B45A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M820 277L803 264V290L820 277Z" fill="#F0B45A"/>
+    <rect x="834" y="226" width="212" height="102" rx="14" fill="#F7E5DF"/>
+    <text x="858" y="264" fill="#17212B" font-size="21" font-weight="700">Human follow-up</text>
+    <text x="858" y="294" fill="#725247" font-size="15">Discovery call, workshop,</text>
+    <text x="858" y="316" fill="#725247" font-size="15">or implementation sprint.</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="116" y="395" width="212" height="102" rx="14" fill="#EAF1FA"/>
+    <text x="140" y="433" fill="#17212B" font-size="21" font-weight="700">GitHub Pages</text>
+    <text x="140" y="463" fill="#3D5D7E" font-size="15">Static proof hub, docs,</text>
+    <text x="140" y="485" fill="#3D5D7E" font-size="15">case study, and code.</text>
+    <rect x="474" y="395" width="212" height="102" rx="14" fill="#F6F2EA"/>
+    <text x="498" y="433" fill="#17212B" font-size="21" font-weight="700">HF Space</text>
+    <text x="498" y="463" fill="#53606D" font-size="15">Gradio voice demo with</text>
+    <text x="498" y="485" fill="#53606D" font-size="15">private Space secrets.</text>
+    <rect x="834" y="395" width="212" height="102" rx="14" fill="#E9F4F0"/>
+    <text x="858" y="433" fill="#17212B" font-size="21" font-weight="700">ElevenLabs</text>
+    <text x="858" y="463" fill="#315C51" font-size="15">Voice output for a public</text>
+    <text x="858" y="485" fill="#315C51" font-size="15">deployment proof.</text>
+    <path d="M328 446H474" stroke="#B7C8D8" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12"/>
+    <path d="M686 446H834" stroke="#B7C8D8" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="116" y="574" fill="#F6F2EA" font-size="22" font-weight="700">Evidence package</text>
+    <text x="116" y="604" fill="#E6DBC8" font-size="16">Repository, reproducible demo, safe deployment guide, and a case study that converts past enterprise work into a current voice-first architecture.</text>
+  </g>
+</svg>
