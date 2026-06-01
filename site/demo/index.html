@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Voice Demo | Otman AI Deployment Hub</title>
-    <meta name="description" content="Live multilingual voice demo (free, open neural — EN/FR/ES), embedded from a Hugging Face Space, for the Otman AI Deployment Hub.">
+    <meta name="description" content="Live multilingual voice demo (EN/FR/ES) running in your browser — no sign-up, no API key — for the Otman AI Deployment Hub.">
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../assets/styles.css">
   </head>
@@ -25,24 +25,46 @@
     <main id="main">
       <section class="page-title narrow">
         <h1>Voice Demo</h1>
-        <p>Type a short script, pick a language, and hear it back. The demo runs in a Hugging Face Space using a free, open neural voice — no API key — in English, French, and Spanish. Premium ElevenLabs voices are optional. The website itself holds no keys and runs no model.</p>
+        <p>Type a short script, pick a language, and hear it back — right here in your browser. No sign-up, no API key, in English, French, and Spanish. A neural version runs as a Hugging Face Space; both keep keys out of public code.</p>
       </section>
 
       <section class="section alt">
         <div class="container">
-          <div class="demo-frame">
-            <iframe
-              src="https://otmanm-otman-voice-deployment-demo.hf.space"
-              title="Otman voice deployment demo"
-              loading="lazy"
-              allow="microphone; clipboard-read; clipboard-write; autoplay"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div class="browser-demo" data-tts>
+            <h2>Try it now</h2>
+            <p class="demo-note" id="tts-unsupported" hidden>
+              Your browser does not support in-browser speech. See the neural version below.
+            </p>
+            <div class="tts-controls">
+              <label class="tts-field">
+                <span>Language</span>
+                <select id="tts-lang">
+                  <option value="en-US">English</option>
+                  <option value="fr-FR">Français</option>
+                  <option value="es-ES">Español</option>
+                </select>
+              </label>
+              <label class="tts-field">
+                <span>Voice</span>
+                <select id="tts-voice"><option value="">Default browser voice</option></select>
+              </label>
+              <label class="tts-field">
+                <span>Speed</span>
+                <input id="tts-rate" type="range" min="0.6" max="1.4" step="0.1" value="1">
+              </label>
+            </div>
+            <label class="tts-field tts-text-field">
+              <span>Script</span>
+              <textarea id="tts-text" rows="4" maxlength="600">Hi, I am Otman's AI deployment assistant. I can explain his readiness audits, implementation sprints, and training work. For a real project, start with one painful workflow and one measurable outcome.</textarea>
+            </label>
+            <div class="tts-actions">
+              <button class="button primary" id="tts-speak" type="button">Speak</button>
+              <button class="button secondary" id="tts-stop" type="button" disabled>Stop</button>
+              <span class="tts-status" id="tts-status" role="status" aria-live="polite"></span>
+            </div>
           </div>
           <p class="demo-note">
-            The Space sleeps after inactivity on free hardware — the first load can take 20–40 seconds to wake.
-            If the demo does not appear,
-            <a href="https://huggingface.co/spaces/otmanm/otman-voice-deployment-demo" target="_blank" rel="noreferrer">open the full demo on Hugging Face</a>.
+            This uses your browser's built-in voices (Web Speech API). Voice quality depends on your device and browser.
           </p>
         </div>
       </section>
@@ -51,22 +73,32 @@
         <div class="container split">
           <div>
             <h2>How it works</h2>
-            <p class="lead">GitHub Pages is static, so it cannot run a model or hold a key. The browser talks to the Space; the Space does the work server-side.</p>
+            <p class="lead">Static GitHub Pages can't run a model or hold a key. So the demo above runs entirely in your browser — and the neural version runs server-side in a Space. Two engines, same separation of concerns.</p>
             <ul class="panel">
-              <li>Gradio app in <code>spaces/voice-demo/app.py</code></li>
-              <li>Free, open neural voice (Edge TTS) — no API key, no cost</li>
-              <li>English, French &amp; Spanish out of the box</li>
+              <li><strong>In-browser:</strong> Web Speech API — zero backend, zero key, works offline</li>
+              <li><strong>Neural Space:</strong> free Edge TTS on Hugging Face — consistent voices for every visitor</li>
               <li>Optional premium ElevenLabs engine if a key is set as a Space secret</li>
+              <li>English, French &amp; Spanish across both</li>
             </ul>
           </div>
           <div class="code-box">
-<pre>This page (GitHub Pages, static)
-  -> iframe embeds the Space
-  -> Hugging Face Space (Gradio, Python)
-  -> free Edge TTS engine (no key)
-     [optional: ElevenLabs if a key is set]
-  -> generated audio (EN / FR / ES)
-  -> playback inside the embed</pre>
+<pre>Visitor opens /demo/ (static)
+  -> [now] browser Web Speech API
+     (audio synthesized on-device)
+  -> [neural] embedded Hugging Face Space
+     -> free Edge TTS (no key)
+        [optional: ElevenLabs if a key]
+  -> audio playback (EN / FR / ES)</pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <div class="voice-card">
+            <h2>Neural version (Hugging Face Space)</h2>
+            <p>For consistent neural voices across all visitors, the same demo runs as a free Hugging Face Space (Edge TTS, no API key). The deployable app and one-command deploy guide live in the repo.</p>
+            <a class="button primary" href="https://github.com/otmanm/otman-ai-deployment-hub/tree/main/spaces/voice-demo" target="_blank" rel="noreferrer">See the deployable Space in the repo</a>
           </div>
         </div>
       </section>
@@ -79,5 +111,6 @@
       </div>
     </footer>
     <script src="../assets/site.js"></script>
+    <script src="../assets/demo.js"></script>
   </body>
 </html>

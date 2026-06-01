@@ -10,4 +10,4 @@ dist/
 build/
 coverage/
 .playwright-mcp/
-qa-homepage.jpeg
+qa-*.jpeg

@@ -100,3 +100,18 @@ test('public files avoid old brand name and hard-coded secrets', () => {
     assert.doesNotMatch(body, /xi-api-key\s*[:=]\s*["'][A-Za-z0-9_-]+/i, `${file} should not contain ElevenLabs secrets`);
   }
 });
+
+test('demo page ships a working in-browser voice demo (no key required)', () => {
+  assert.equal(existsSync(path.join(root, 'site/assets/demo.js')), true, 'demo.js should exist');
+
+  const demo = read('site/demo/index.html');
+  assert.match(demo, /data-tts/, 'demo page should mount the in-browser demo');
+  assert.match(demo, /assets\/demo\.js/, 'demo page should load demo.js');
+  assert.match(demo, /id="tts-(speak|lang|voice|text)"/, 'demo page should expose the TTS controls');
+
+  const js = read('site/assets/demo.js');
+  assert.match(js, /speechSynthesis/, 'demo.js should use the Web Speech API');
+  assert.match(js, /SpeechSynthesisUtterance/, 'demo.js should build an utterance');
+  // The free in-browser path must never depend on a key or network secret.
+  assert.doesNotMatch(js, /api[_-]?key/i, 'in-browser demo must not reference an API key');
+});
