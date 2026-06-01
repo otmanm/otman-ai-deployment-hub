@@ -25,7 +25,7 @@
     <main id="main">
       <section class="page-title narrow">
         <h1>Voice Demo</h1>
-        <p>Type a short script, generate audio, and hear it back. The demo runs in a Hugging Face Space: text in, ElevenLabs audio out, API keys stored as private Space secrets — never in this page.</p>
+        <p>Type a short script, pick a language, and hear it back. The demo runs in a Hugging Face Space using a free, open neural voice — no API key — in English, French, and Spanish. Premium ElevenLabs voices are optional. The website itself holds no keys and runs no model.</p>
       </section>
 
       <section class="section alt">
@@ -51,21 +51,21 @@
         <div class="container split">
           <div>
             <h2>How it works</h2>
-            <p class="lead">GitHub Pages is static, so it cannot safely hold an API key. The browser talks to the Space; only the Space holds the secret.</p>
+            <p class="lead">GitHub Pages is static, so it cannot run a model or hold a key. The browser talks to the Space; the Space does the work server-side.</p>
             <ul class="panel">
               <li>Gradio app in <code>spaces/voice-demo/app.py</code></li>
-              <li>ElevenLabs text-to-speech, server-side</li>
-              <li><code>ELEVENLABS_API_KEY</code> stored as a Hugging Face Space secret</li>
-              <li>Safe missing-key fallback instead of a crash</li>
+              <li>Free, open neural voice (Edge TTS) — no API key, no cost</li>
+              <li>English, French &amp; Spanish out of the box</li>
+              <li>Optional premium ElevenLabs engine if a key is set as a Space secret</li>
             </ul>
           </div>
           <div class="code-box">
 <pre>This page (GitHub Pages, static)
   -> iframe embeds the Space
   -> Hugging Face Space (Gradio, Python)
-  -> reads ELEVENLABS_API_KEY (Space secret)
-  -> ElevenLabs API
-  -> generated audio
+  -> free Edge TTS engine (no key)
+     [optional: ElevenLabs if a key is set]
+  -> generated audio (EN / FR / ES)
   -> playback inside the embed</pre>
           </div>
         </div>

@@ -16,11 +16,12 @@ Hugging Face Spaces free CPU hardware. The public `/demo/` page embeds it in an
 
 ## What The Space Does
 
-1. Takes a short visitor question or website intro text.
-2. Uses ElevenLabs text-to-speech to generate audio.
-3. Shows a clear setup message if `ELEVENLABS_API_KEY` is missing — it does not crash.
+1. Takes a short visitor script and a language (English / Français / Español).
+2. Generates audio with **Edge TTS — free, neural, no API key** (the default).
+3. Offers a **premium ElevenLabs** engine *only* if `ELEVENLABS_API_KEY` is set.
 
-Dynamic LLM answers can be added later with `OPENAI_API_KEY`.
+The free engine needs no key and no money, so the Space works as soon as it is
+deployed. ElevenLabs is optional and never required.
 
 ## Prerequisites
 
@@ -53,7 +54,10 @@ Hugging Face rebuilds the Space automatically after the upload.
 > If the build fails with an SDK-version error, bump `sdk_version` in
 > `spaces/voice-demo/README.md` to a current Gradio 5.x release and re-upload.
 
-## Add The Secret (required for audio)
+## Optional: Premium Voices (ElevenLabs)
+
+**Not required.** The Space already works for free with Edge TTS. Add this only
+if you want premium ElevenLabs voices as an extra engine.
 
 The key must be a **secret**, not a variable. Secrets are private and cannot be
 read back from the settings page once set; variables are publicly viewable.
@@ -64,17 +68,14 @@ read back from the settings page once set; variables are publicly viewable.
 4. Name: `ELEVENLABS_API_KEY` — Value: your real ElevenLabs key.
 5. Save, then **Restart** (or Factory rebuild) the Space.
 
-Optional later additions (same screen): `OTMAN_CALENDLY_URL` (variable),
-`OPENAI_API_KEY` (secret, only if dynamic answers are added).
-
 **Never** put the key in git, in this repo, in a screenshot, or in a markdown file.
 
 ## Verify
 
 1. Open the Space page; wait for it to build/wake (20–40s on free hardware).
-2. Enter a short script and click **Generate voice sample**.
-3. With the key set: audio is produced and plays.
-   Without the key: the app shows the missing-key message and stays up.
+2. Pick a language, keep the **Free — Edge TTS** engine, and click **Generate
+   voice sample**. Audio is produced with no key. Try English, French, Spanish.
+3. (Optional) If you set the ElevenLabs secret, a **Premium** engine appears.
 4. Open `https://otmanm.github.io/otman-ai-deployment-hub/demo/` and confirm the
    embedded Space renders inside the page (not just a link out).
 

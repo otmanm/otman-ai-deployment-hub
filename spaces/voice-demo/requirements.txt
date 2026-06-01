@@ -1,3 +1,5 @@
 gradio>=4.44,<6
-elevenlabs>=2.0,<3
+edge-tts>=6.1
 python-dotenv>=1.0,<2
+# Optional: only used when the premium ElevenLabs engine is enabled via a key.
+elevenlabs>=2.0,<3

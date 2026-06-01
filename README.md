@@ -21,10 +21,11 @@ The first version is intentionally small:
 | Hugging Face Space | `https://huggingface.co/spaces/otmanm/otman-voice-deployment-demo` |
 | Space embed origin | `https://otmanm-otman-voice-deployment-demo.hf.space` |
 
-The `/demo/` page embeds the Space in an `<iframe>`. The browser never sees the
-ElevenLabs key: `ELEVENLABS_API_KEY` lives only as a **secret** in the Space
-settings (Settings → Variables and secrets), and the Gradio app reads it
-server-side. To deploy or update the Space, follow `docs/deploy-huggingface-space.md`.
+The `/demo/` page embeds the Space in an `<iframe>`. The Space generates audio
+with a **free, open neural voice (Edge TTS)** — no API key, no cost — in English,
+French, and Spanish. A premium ElevenLabs engine is optional and appears only if
+`ELEVENLABS_API_KEY` is set as a Space **secret** (never in git). Deploying the
+Space needs only a free Hugging Face token. See `docs/deploy-huggingface-space.md`.
 
 ## Public Assets
 
