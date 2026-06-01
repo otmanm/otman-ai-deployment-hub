@@ -10,8 +10,21 @@ The first version is intentionally small:
 
 - a static GitHub Pages site in `site/`
 - an Ask-Capitano case study in `site/case-studies/ask-capitano/`
-- a Hugging Face Space voice demo in `spaces/voice-demo/`
+- a Hugging Face Space voice demo in `spaces/voice-demo/`, embedded live on the `/demo/` page
 - deployment guides in `docs/`
+
+## Live Demo
+
+| Surface | URL |
+|---|---|
+| Demo page (embeds the Space) | `https://otmanm.github.io/otman-ai-deployment-hub/demo/` |
+| Hugging Face Space | `https://huggingface.co/spaces/otmanm/otman-voice-deployment-demo` |
+| Space embed origin | `https://otmanm-otman-voice-deployment-demo.hf.space` |
+
+The `/demo/` page embeds the Space in an `<iframe>`. The browser never sees the
+ElevenLabs key: `ELEVENLABS_API_KEY` lives only as a **secret** in the Space
+settings (Settings → Variables and secrets), and the Gradio app reads it
+server-side. To deploy or update the Space, follow `docs/deploy-huggingface-space.md`.
 
 ## Public Assets
 
