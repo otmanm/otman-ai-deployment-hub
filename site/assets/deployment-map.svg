@@ -1,6 +1,6 @@
 <svg width="1160" height="680" viewBox="0 0 1160 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Ask-Capitano deployment architecture map</title>
-  <desc id="desc">A deployment map connecting website visitors, Ask-Capitano, GitHub Pages, Hugging Face Spaces, ElevenLabs, and CRM follow-up.</desc>
+  <desc id="desc">A deployment map connecting website visitors, Ask-Capitano, GitHub Pages, Hugging Face Spaces, a voice layer, and CRM follow-up.</desc>
   <rect width="1160" height="680" rx="32" fill="#F6F2EA"/>
   <rect x="54" y="54" width="1052" height="572" rx="28" fill="#17212B"/>
   <path d="M152 182H1008" stroke="#E6DBC8" stroke-opacity=".22" stroke-width="2"/>
@@ -38,9 +38,9 @@
     <text x="498" y="463" fill="#53606D" font-size="15">Gradio voice demo with</text>
     <text x="498" y="485" fill="#53606D" font-size="15">private Space secrets.</text>
     <rect x="834" y="395" width="212" height="102" rx="14" fill="#E9F4F0"/>
-    <text x="858" y="433" fill="#17212B" font-size="21" font-weight="700">ElevenLabs</text>
-    <text x="858" y="463" fill="#315C51" font-size="15">Voice output for a public</text>
-    <text x="858" y="485" fill="#315C51" font-size="15">deployment proof.</text>
+    <text x="858" y="433" fill="#17212B" font-size="21" font-weight="700">Voice layer</text>
+    <text x="858" y="463" fill="#315C51" font-size="15">Free open voice, premium</text>
+    <text x="858" y="485" fill="#315C51" font-size="15">optional.</text>
     <path d="M328 446H474" stroke="#B7C8D8" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12"/>
     <path d="M686 446H834" stroke="#B7C8D8" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12"/>
   </g>
