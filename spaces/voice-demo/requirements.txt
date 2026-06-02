@@ -1,4 +1,4 @@
-gradio>=4.44,<6
+gradio>=5.50,<6
 edge-tts>=6.1
 python-dotenv>=1.0,<2
 # Optional: only used when the premium ElevenLabs engine is enabled via a key.
