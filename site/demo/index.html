@@ -97,8 +97,21 @@
         <div class="container">
           <div class="voice-card">
             <h2>Neural version (Hugging Face Space)</h2>
-            <p>For consistent neural voices across all visitors, the same demo runs as a free Hugging Face Space (Edge TTS, no API key). The deployable app and one-command deploy guide live in the repo.</p>
-            <a class="button primary" href="https://github.com/otmanm/otman-ai-deployment-hub/tree/main/spaces/voice-demo" target="_blank" rel="noreferrer">See the deployable Space in the repo</a>
+            <p>Consistent neural voices for every visitor — the same demo running server-side as a free Hugging Face Space (Edge TTS, no API key). It loads live below; the first request may take 20–40&nbsp;seconds while the free CPU Space wakes from sleep.</p>
+            <div class="demo-frame">
+              <iframe
+                src="https://elcapitano2k24-otman-voice-deployment-demo.hf.space"
+                title="Otman Voice Deployment Demo — neural Hugging Face Space"
+                loading="lazy"
+                width="100%"
+                height="640"
+                frameborder="0"
+                allow="autoplay"></iframe>
+            </div>
+            <p class="demo-note">
+              Runs entirely server-side in the Space — this static page holds no keys and runs no model.
+              <a href="https://github.com/otmanm/otman-ai-deployment-hub/tree/main/spaces/voice-demo" target="_blank" rel="noreferrer">See the deployable app &amp; one-command deploy guide in the repo</a>.
+            </p>
           </div>
         </div>
       </section>
